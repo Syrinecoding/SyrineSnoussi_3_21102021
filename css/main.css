@@ -56,7 +56,7 @@ img {
 }
 
 .location {
-  background-color: #EAEAEA;
+  background-color: #ececec;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ img {
   font-family: inherit;
   border: none;
   padding: 1rem 0;
-  background-color: #EAEAEA;
+  background-color: #ececec;
   text-align: center;
 }
 
@@ -73,7 +73,7 @@ h2 {
 }
 
 .exploreBox {
-  background-color: #F6F6F6;
+  background-color: #f9f9f9;
   text-align: center;
   padding: 2rem 0;
 }
@@ -83,7 +83,7 @@ h2 {
 }
 
 .exploreBox p {
-  color: #787878;
+  color: #868686;
   font-size: 1.2rem;
 }
 
@@ -95,6 +95,12 @@ h2 {
   border: none;
   margin: 1.5rem;
   background: radial-gradient(at 20% top, #FF79DA, #9356DC);
+  -webkit-box-shadow: 0 5px 5px #C6C6C6;
+          box-shadow: 0 5px 5px #C6C6C6;
+}
+
+.exploreBox__btn:hover {
+  background: radial-gradient(at 20% top, #ff93e1, #a16be0);
 }
 
 .selectionBox {
@@ -124,12 +130,15 @@ h2 {
   height: 71px;
   padding: 1rem;
   border-radius: 17px;
-  background-color: #F6F6F6;
+  background-color: #f9f9f9;
   border: none;
   -webkit-box-shadow: 0 5px 5px #EAEAEA;
           box-shadow: 0 5px 5px #EAEAEA;
   font-size: 1rem;
   margin: 0.8rem 0.5rem;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,34 +146,39 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .selectionBox__btn:hover {
-  background-color: #f2eafb;
+  background-color: #e9ddf8;
 }
 
-.selectionBox span {
+.selectionBox__btn span {
   border: 1px solid #9356DC;
   background-color: #9356DC;
   color: #FFF;
   padding: 0.2rem 0.5rem;
   border-radius: 25px;
-  position: relative;
-  right: 40px;
+  display: inline-block;
+  position: absolute;
+  left: -15px;
 }
 
 .selectionBox__icon {
-  color: #787878;
+  color: #868686;
   font-size: 1.2rem;
+  display: inline-block;
+  position: absolute;
+  left: 30px;
 }
 
 .restaurants {
-  background-color: #F6F6F6;
+  background-color: #f9f9f9;
   width: 100vw;
   padding: 1rem 0 2rem 0;
   display: -webkit-box;
@@ -189,13 +203,14 @@ h2 {
 
 .card {
   min-width: 340px;
-  width: 40%;
-  height: auto;
+  width: 80%;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 10px #EAEAEA;
           box-shadow: 0 5px 10px #EAEAEA;
   margin: 0 1rem 1rem;
   background-color: #FFF;
+  position: relative;
+  z-index: 1;
 }
 
 .card__img {
@@ -207,17 +222,6 @@ h2 {
   height: 175px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-
-.card__img--position {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 175px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 
 .card__legend {
@@ -237,16 +241,25 @@ h2 {
           align-items: center;
 }
 
-.card__legend .iconify {
-  font-size: 2rem;
-  color: #787878;
+.card__legend p {
+  color: #606060;
+  font-weight: 300;
+}
+
+.card__legend .far {
+  font-size: 1.5rem;
+  color: #868686;
 }
 
 .card__label-new {
-  background: #99E2D0;
+  background-color: #99E2D0;
   padding: 5px 10px;
-  color: green;
-  font-size: 0.8rem;
+  color: #008766;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
 }
 
 footer {
