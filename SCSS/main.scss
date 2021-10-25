@@ -17,6 +17,7 @@ body {
 .load {
     width: 100%;
     height: 100vh;
+    display: none;
 }
 a {
     text-decoration: none;
@@ -100,7 +101,8 @@ h2{
         margin: 0.8rem 0.5rem;
         @include flexbox();
         &:hover {
-            background-color: #F5EDFF;
+            // background-color: #F5EDFF;
+            background-color: lighten($color: $colorPrimary, $amount: 35);
         }
     }
     span {
