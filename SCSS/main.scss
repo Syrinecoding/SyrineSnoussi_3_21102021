@@ -1,0 +1,276 @@
+@import "./resets";
+@import "./variables";
+@mixin flexbox ($direction: row, $spacing: space-around, $align: center, $wrap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $spacing;
+    align-items: $align;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.load {
+    width: 100%;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    width: 100%;
+    padding: 1rem;
+    @include flexbox($spacing: center);
+
+    
+    h1 {
+        font-family: $font-family;
+        text-align: center;
+    }
+    
+}
+main {
+    width: 100%;
+
+}
+img {
+    display: block;
+    // max-width: 400px;
+    
+}
+.location {
+    background-color: map-get($map: $grey, $key: medium);
+    text-align: center;
+    #location {
+        font-family: inherit;
+        border:none;
+        padding: 1rem 0;
+        background-color: map-get($map: $grey, $key: medium);
+        text-align: center;
+       
+    } 
+}
+h2{
+    font-size: 1.5rem;
+}
+.exploreBox {
+    background-color: map-get($map: $grey, $key: light);
+    text-align: center;
+    padding: 2rem 0;
+    h2{
+        padding: 1rem 3rem;
+    }
+    p {
+        color: map-get($map: $grey, $key: font);
+        font-size: 1.2rem;
+    }
+    &__btn{
+        padding: 1rem;
+        // background-color: $colorPrimary;
+        border-radius: 24px;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        margin: 1.5rem;
+        background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
+    }
+}
+.selectionBox {
+    margin: 2.5rem 1rem;
+    // height: 430px;
+    @include flexbox($direction: column, $align: center);
+    h2 {
+        padding: 1rem 0; 
+        align-self: flex-start;
+    }
+    &__btn {
+        width: 320px;
+        height: 71px;
+        padding: 1rem;
+        border-radius: 17px;
+        background-color: map-get($map: $grey, $key: light);
+        border:none;
+        box-shadow: 0 5px 5px map-get($map: $grey, $key: medium);
+        font-size: 1rem;
+        margin: 0.8rem 0.5rem;
+        @include flexbox();
+        &:hover {
+            background-color: #F5EDFF;
+        }
+    }
+    span {
+        border: 1px solid $colorPrimary;
+        background-color: $colorPrimary;
+        color: #FFF;
+        padding: 0.2rem 0.5rem;
+        border-radius: 25px;
+        position: relative;
+        right: 40px;
+    }
+    &__icon {
+        color: map-get($map: $grey, $key: font);
+        font-size: 1.2rem;
+    }
+}
+.restaurants {
+    background-color: #F6F6F6;
+    width: 100vw;
+    padding: 1rem 0 2rem 0;
+    
+    h2{
+        padding: 2rem 1rem 1rem 1rem;
+        align-self: flex-start;
+    }
+    @include flexbox($direction: column);
+}
+.card {
+    min-width: 340px;
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
+    margin: 0 1rem 1rem;
+    background-color: #FFF;
+    &__img {
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+        height: 175px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }    
+    &__img--position {
+        object-fit: cover;
+        width: 100%;
+        height: 175px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-position: bottom;    
+    }
+    &__legend{
+        padding: 1rem;
+        @include flexbox($spacing: space-between);
+        .iconify {
+            font-size: 2rem;
+            color: map-get($map: $grey, $key: font);
+        }
+    }
+    &__label-new {
+        background: $colorTertiary;
+        padding: 5px 10px;
+        // position: relative;
+        // left: 240px;
+        // bottom: 150px;
+        color: green;
+        font-size: 0.8rem;
+        
+    }
+}
+
+footer {
+    background-color: #353535;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.5rem;
+    h4 {
+        font-family: $font-family;
+        margin-bottom: 1rem;
+    }
+    a {
+        color: #FFF
+    }
+    ul {
+        list-style: none;
+   
+    }
+}
+.fa-arrow-left {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1.8rem;
+    left: 2rem;
+    
+}
+.menu__img{
+    width: 100%;
+    height: auto;
+}
+.menu {
+    min-width: 375px;
+    // border: 3px solid green;
+    padding: 1rem;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    background-color: map-get($map: $grey, $key: light);
+    transform: translateY(-38px);
+    
+    &__heading{
+        h2 {
+            font-family: $font-family;
+            font-size: 1.8rem;
+        }
+        .iconify {
+            font-size: 2.1rem;
+            color: map-get($map: $grey, $key: font );
+        }
+        padding: 1rem 0;
+        @include flexbox($spacing: space-between)
+    }
+    &__bloc {
+        margin-bottom: 2rem;
+       
+    }
+    &__subtitle {
+        padding: 0.5rem 0;
+        position: relative;
+        font-weight: 300;
+        font-size: 1rem;
+        // color: map-get($map: $grey, $key: font);
+        &::after {
+            content:"";
+            width: 40px;
+            border-bottom: 3px solid $colorTertiary;
+            position:absolute;
+            left: 0;
+            bottom: -2px;
+
+        }
+    }
+    &__item {        
+        padding: 0.7rem;
+        line-height: 1.5rem;
+        border-radius: 14px;
+        background-color: #FFFF;
+        margin: 1rem 0;
+        box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
+        @include flexbox ($spacing: space-between, $align: flex-end);
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        p {
+            font-weight: 300;
+            font-size: 0.9rem; 
+            max-width: 260px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        strong {
+            display: inline-block;
+            margin: 0 1rem;
+            
+        }
+        
+    }
+    &__btn {
+        @include flexbox($spacing: center);
+    }
+
+}
