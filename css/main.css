@@ -95,6 +95,7 @@ h2 {
   border: none;
   margin: 1.5rem;
   background: radial-gradient(at 20% top, #FF79DA, #9356DC);
+  cursor: pointer;
   -webkit-box-shadow: 0 5px 5px #C6C6C6;
           box-shadow: 0 5px 5px #C6C6C6;
 }
@@ -260,15 +261,17 @@ h2 {
 .far {
   font-size: 1.5rem;
   color: #868686;
+  -webkit-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.far::before {
-  content: '\f004';
-}
-
-.far:hover::before {
-  color: #FF79DA;
-  font-weight: bold;
+.far:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background: radial-gradient(at center, #FF79DA, #9356DC);
 }
 
 footer {

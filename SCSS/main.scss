@@ -79,6 +79,7 @@ h2{
         border: none;
         margin: 1.5rem;
         background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
+        cursor: pointer;
         @include shadow();
         &:hover{
             background: radial-gradient(at 20% top, lighten($colorSecondary, 5), lighten($colorPrimary, 5));
@@ -177,55 +178,7 @@ h2{
             font-weight: 300;
         }
     }    
-        // .far {
-        //     font-size: 1.5rem;
-        //     color: darken($colorGrey, 25);
-        //     background-color: #FFF;
-        //     border-radius: 50%;
-        //     height: 1.5rem;
-        //     position: relative;
-        //     overflow: hidden;
-
-        //     &:hover: {
-        //         content: "\f004";
-        //         font-weight: bold;
-        //         color: transparent;
-        //         background: radial-gradient($colorSecondary, $colorPrimary);
-        //         background-clip: content-box;
-        //         -webkit-text-fill-color: transparent;
-                
-
-        //     }
-        // } 
-        // .far::before {
-        //     content: "\f004";
-        //     position: absolute;
-        //     top: 1.5rem;
-        //     font-weight: bold;
-        //     transition: color 3s ease-out;
-        // }    
-        // }   
-        //     &:hover {
-        //         background-color: $colorSecondary;
-        //         background-clip: text;
-        //         -webkit-background-clip: text;
-        //         color: transparent;
-        //         color: #FFF;
-        //         background-color: #000;
-        //         border-radius: 50%;
-        //     }
-
         
-        // .far::before {
-        //     content: "\f004";
-        //     font-weight: bold;
-        //     transition: color 1s ease-out;
-        // }
-        // .far:hover::before {
-        //     color: $colorSecondary;
-        //     cursor: pointer;
-        // }
-    
     &__label-new {
         background-color: $colorTertiary;
         padding: 5px 10px;        
@@ -241,18 +194,23 @@ h2{
 .far {
     font-size: 1.5rem;
     color: darken($colorGrey, 25);
-    &::before {
-        content: '\f004';
-    }
-    &:hover::before {
-        // background: radial-gradient(at center $colorSecondary, $colorPrimary);
-        // background-clip: text;
-        // -webkit-background-clip: text;
-        color: $colorSecondary;
-        font-weight: bold;
+    transition: color 2s ease-out;
+    display: inline-block;
+    overflow: hidden;
+    
+    
+    &:hover {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background: radial-gradient(at center, $colorSecondary, $colorPrimary);
+        
+        
+        
     }
 
 }
+
 footer {
     background-color: #353535;
     color: #fff;
