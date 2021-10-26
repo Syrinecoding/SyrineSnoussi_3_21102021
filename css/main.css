@@ -246,11 +246,6 @@ h2 {
   font-weight: 300;
 }
 
-.card__legend .far {
-  font-size: 1.5rem;
-  color: #868686;
-}
-
 .card__label-new {
   background-color: #99E2D0;
   padding: 5px 10px;
@@ -260,6 +255,20 @@ h2 {
   top: 15px;
   right: 15px;
   z-index: 2;
+}
+
+.far {
+  font-size: 1.5rem;
+  color: #868686;
+}
+
+.far::before {
+  content: '\f004';
+}
+
+.far:hover::before {
+  color: #FF79DA;
+  font-weight: bold;
 }
 
 footer {
