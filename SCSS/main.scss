@@ -1,5 +1,6 @@
 @import "./resets";
 @import "./variables";
+@import "./heart";
 @mixin flexbox ($direction: row, $spacing: space-around, $align: center, $wrap: null) {
     display: flex;
     flex-direction: $direction;
@@ -191,25 +192,7 @@ h2{
         
     }
 }
-.far {
-    font-size: 1.5rem;
-    color: darken($colorGrey, 25);
-    transition: color 2s ease-out;
-    display: inline-block;
-    overflow: hidden;
-    
-    
-    &:hover {
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background: radial-gradient(at center, $colorSecondary, $colorPrimary);
-        
-        
-        
-    }
 
-}
 
 footer {
     background-color: #353535;

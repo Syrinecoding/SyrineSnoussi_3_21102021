@@ -5,6 +5,90 @@
           box-sizing: border-box;
 }
 
+@-webkit-keyframes fillIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fillIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card__heart {
+  position: relative;
+}
+
+.card__heart--empty {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #868686;
+  display: inline-block;
+  -webkit-transition: 2s ease-out;
+  transition: 2s ease-out;
+}
+
+.card__heart--empty:hover {
+  font-family: fontawesome;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+.fas {
+  font-size: 1.5rem;
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  opacity: 0;
+}
+
+.fas:hover {
+  opacity: 1;
+  z-index: 2;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -256,22 +340,6 @@ h2 {
   top: 15px;
   right: 15px;
   z-index: 2;
-}
-
-.far {
-  font-size: 1.5rem;
-  color: #868686;
-  -webkit-transition: color 2s ease-out;
-  transition: color 2s ease-out;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.far:hover {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background: radial-gradient(at center, #FF79DA, #9356DC);
 }
 
 footer {
