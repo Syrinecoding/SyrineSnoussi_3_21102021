@@ -1,0 +1,22 @@
+.menu__price::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    display: inline-block;
+    color: white;
+    background-color: $colorTertiary;
+    font-weight: 900;
+    // z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    height: 4.4rem;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: 1s ease-in-out;
+}    
+.menu__price:hover {
+    &::after {
+        transform:scale(1);   
+    }
+}

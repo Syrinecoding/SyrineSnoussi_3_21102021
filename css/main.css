@@ -9,13 +9,8 @@
   0% {
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    opacity: 1;
-  }
-  10% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
     opacity: 1;
   }
   80% {
@@ -33,13 +28,8 @@
   0% {
     -webkit-transform-origin: bottom;
             transform-origin: bottom;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    opacity: 1;
-  }
-  10% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
     opacity: 1;
   }
   80% {
@@ -74,11 +64,37 @@
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
+  cursor: default;
 }
 
 .fas:hover {
-  -webkit-animation: fillIn 3s 1s forwards;
-          animation: fillIn 3s 1s forwards;
+  -webkit-animation: fillIn 1500ms ease-out forwards;
+          animation: fillIn 1500ms ease-out forwards;
+}
+
+.menu__price::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f058";
+  display: inline-block;
+  color: white;
+  background-color: #99E2D0;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 20px;
+  height: 4.4rem;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.menu__price:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 html {
@@ -399,11 +415,6 @@ footer ul {
   font-size: 1.8rem;
 }
 
-.menu__heading .iconify {
-  font-size: 2.1rem;
-  color: #787878;
-}
-
 .menu__bloc {
   margin-bottom: 2rem;
 }
@@ -425,11 +436,13 @@ footer ul {
 }
 
 .menu__item {
+  position: relative;
   padding: 0.7rem;
   line-height: 1.5rem;
   border-radius: 14px;
   background-color: #FFFF;
   margin: 1rem 0;
+  overflow: hidden;
   -webkit-box-shadow: 0 5px 10px #EAEAEA;
           box-shadow: 0 5px 10px #EAEAEA;
   display: -webkit-box;
@@ -457,13 +470,11 @@ footer ul {
   font-size: 0.9rem;
   max-width: 260px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .menu__item strong {
   display: inline-block;
-  margin: 0 1rem;
 }
 
 .menu__btn {

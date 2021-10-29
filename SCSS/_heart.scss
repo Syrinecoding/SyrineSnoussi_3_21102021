@@ -1,23 +1,14 @@
 
 @keyframes fillIn {
     0%{
-        // transform: translateX(-28px);
         transform-origin: bottom;
-        transform: scale(0.2);
+        transform: scale(0.1);
         opacity: 1;
     } 
-    10%{
-        // transform: translateX(-28px);
-        transform: scale(0.5);
-        opacity: 1;                
-    }   
     80%{
-        // transform: translateX(-28px);
-        transform: scale(1.2);
-                      
+        transform: scale(1.2);                     
     }
     100%{
-        // transform: translateX(-28px);
         transform: scale(1);
         opacity:1;        
     }
@@ -48,8 +39,12 @@
     background-clip: text;
     -webkit-background-clip: text;
     background-image: $colorHeart;   
-    opacity: 0;  
+    opacity: 0; 
+    cursor: default; 
+    // z-index: 1;
     &:hover{        
-        animation: fillIn 3s 1s forwards ;   
-    }     
+        animation: fillIn 1500ms ease-out forwards;
+        
+    }
+    
 }
