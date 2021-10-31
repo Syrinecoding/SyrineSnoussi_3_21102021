@@ -1,16 +1,9 @@
 @import "./resets";
 @import "./variables";
+@import "./_mixins";
 @import "./heart";
 @import "./check";
-@mixin flexbox ($direction: row, $spacing: space-around, $align: center, $wrap: null) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $spacing;
-    align-items: $align;
-}
-@mixin shadow {
-    box-shadow: 0 5px 5px $colorGrey;
-}
+
 html {
     scroll-behavior: smooth;
 }
@@ -261,22 +254,27 @@ footer {
         }
     }
     &__item {     
-        position: relative;   
-        padding: 0.7rem;
+        // position: relative;  
+        // padding: 0.7rem;
         line-height: 1.5rem;
         border-radius: 14px;
         background-color: #FFFF;
         margin: 1rem 0;
-        overflow: hidden;
+        // overflow: hidden;
         box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
         @include flexbox ($spacing: space-between, $align: flex-end);
+       
         h4 {
             font-size: 1.1rem;
             font-weight: 500;
+            padding-top: 0.7rem;
+            padding-left: 0.7rem;
         }
         p {
             font-weight: 300;
             font-size: 0.9rem; 
+            padding-bottom: 0.7rem;
+            padding-left: 0.7rem;
             max-width: 260px;
             white-space: nowrap;
             // overflow: hidden;
@@ -284,9 +282,11 @@ footer {
         }
         strong {
             display: inline-block;
-            // margin: 0 1rem;   
-        }       
-    }    
+            margin:  0.7rem;   
+        }
+             
+    }
+        
     &__btn {
         @include flexbox($spacing: center);
     }

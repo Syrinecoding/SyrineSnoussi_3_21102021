@@ -1,22 +1,32 @@
-.menu__price::after {
-    font-family: "Font Awesome 5 Free";
-    content: "\f058";
-    display: inline-block;
-    color: white;
+.menu__chosen {
     background-color: $colorTertiary;
-    font-weight: 900;
-    // z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 20px 20px;
+    width: 0px;
     height: 4.4rem;
-    transform-origin: right;
-    transform: scale(0, 1);
-    transition: 1s ease-in-out;
-}    
-.menu__price:hover {
-    &::after {
-        transform:scale(1);   
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+    @include flexbox($spacing: center, $align:center);
+    opacity: 0;  
+    &--icon {
+        color: white;
+        font-size: 1.3rem;
     }
+}
+.menu__price {
+    @include flexbox($spacing: center, $align: flex-end);
+}
+
+.menu__item:hover {
+    & .menu__chosen{
+        width: 70px;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+        & .menu__chosen--icon {
+            transform: rotate(360deg);
+            transition: all 1s ease-in-out;
+        }
+    } 
 }
