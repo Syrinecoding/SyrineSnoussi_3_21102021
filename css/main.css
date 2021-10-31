@@ -145,7 +145,10 @@
 
 .menu {
   min-width: 375px;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
   background-color: #F6F6F6;
@@ -212,6 +215,7 @@
 }
 
 .menu__item {
+  width: 95%;
   line-height: 1.5rem;
   border-radius: 14px;
   background-color: #FFFF;
@@ -245,6 +249,8 @@
   font-weight: 500;
   padding-top: 0.7rem;
   padding-left: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu__item p {
