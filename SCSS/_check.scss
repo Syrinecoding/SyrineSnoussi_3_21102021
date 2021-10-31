@@ -23,6 +23,7 @@
     & .menu__chosen{
         width: 70px;
         opacity: 1;
+        transform: translateX(1);
         transition: all 1s ease-in-out;
         & .menu__chosen--icon {
             transform: rotate(360deg);
