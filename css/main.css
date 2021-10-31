@@ -152,12 +152,12 @@
   padding-top: 1rem;
   padding-left: 1rem;
   margin-right: 1rem;
-  margin-bottom: 1rem;
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
   background-color: #F6F6F6;
   -webkit-transform: translateY(-38px);
           transform: translateY(-38px);
+  margin-bottom: -38px;
 }
 
 .menu__heading {

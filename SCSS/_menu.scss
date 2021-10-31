@@ -10,17 +10,17 @@
     width: 100%;
     height: auto;
 }
+
 .menu {
     min-width: 375px;
-    // border: 3px solid green;
     padding-top: 1rem;
     padding-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 1rem;
     border-top-left-radius: 38px;
     border-top-right-radius: 38px;
     background-color: map-get($map: $grey, $key: light);
     transform: translateY(-38px);
+    margin-bottom: -38px;
     
     &__heading{
         h2 {
@@ -58,8 +58,6 @@
 }
 
 .menu__item {     
-    // position: relative;  
-    // padding: 0.7rem;
     width: 95%;
     line-height: 1.5rem;
     border-radius: 14px;
@@ -68,12 +66,7 @@
     overflow: hidden;
     box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
     @include flexbox ($spacing: space-between, $align: flex-end);
-    // &__detail {
-    //     white-space: nowrap;
-    //     text-overflow: ellipsis;
-    //     overflow: hidden;
-    //     max-width: 260px;
-    // }
+
     h4 {
         font-size: 1.1rem;
         font-weight: 500;
