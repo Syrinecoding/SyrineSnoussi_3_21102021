@@ -118,8 +118,6 @@
 .menu__item:hover .menu__chosen {
   width: 70px;
   opacity: 1;
-  -webkit-transform: translateX(1);
-          transform: translateX(1);
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
@@ -129,6 +127,12 @@
           transform: rotate(360deg);
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+.menu__item:hover .menu__detail {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .fa-arrow-left {
@@ -157,7 +161,7 @@
 }
 
 .menu__heading {
-  padding: 1rem 0;
+  padding: 1rem 1rem 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,12 +242,6 @@
           align-items: flex-end;
 }
 
-.menu__item__detail {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 260px;
-}
-
 .menu__item h4 {
   font-size: 1.1rem;
   font-weight: 500;
@@ -251,6 +249,7 @@
   padding-left: 0.7rem;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu__item p {
@@ -258,14 +257,15 @@
   font-size: 0.9rem;
   padding-bottom: 0.7rem;
   padding-left: 0.7rem;
-  max-width: 260px;
+  max-width: 265px;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .menu__item strong {
   display: inline-block;
-  margin: 0.7rem;
+  margin: 0.7rem 1rem;
 }
 
 html {
