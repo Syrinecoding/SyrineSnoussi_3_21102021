@@ -2,7 +2,7 @@
 @import "./variables";
 @import "./_mixins";
 @import "./heart";
-@import "./check";
+@import "./menu-item";
 @import "./menu";
 @import "./loading";
 
@@ -21,8 +21,7 @@ header {
     width: 100%;
     padding: 1rem;
     @include flexbox($spacing: center);
-
-    
+   
     h1 {
         font-family: $font-family;
         text-align: center;
@@ -38,13 +37,16 @@ img {
     // max-width: 400px;
     
 }
+
 .location {
     background-color: lighten($colorGrey, 15);
     text-align: center;
+    box-shadow: inset 0 10px 5px -8px #c5c4c4;
+    padding: 1rem 0;
     #location {
         font-family: inherit;
+        font-size: 1rem;
         border:none;
-        padding: 1rem 0;
         background-color: lighten($colorGrey, 15);
         text-align: center;      
     } 
@@ -65,7 +67,6 @@ h2{
     }
     &__btn{
         padding: 1rem;
-        // background-color: $colorPrimary;
         border-radius: 24px;
         color: #fff;
         font-size: 1rem;
@@ -73,9 +74,10 @@ h2{
         margin: 1.5rem;
         background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
         cursor: pointer;
-        @include shadow();
+        box-shadow: 0 5px 5px $colorGrey;
         &:hover{
             background: radial-gradient(at 20% top, lighten($colorSecondary, 5), lighten($colorPrimary, 5));
+            box-shadow: 0 8px 8px #b8b7b7;
             
         }
     }

@@ -1,0 +1,104 @@
+@keyframes charging-menu {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.menu__item {     
+    width: 100%;
+    line-height: 1.5rem;
+    border-radius: 14px;
+    background-color: #FFFF;
+    margin: 1rem 0;
+    overflow: hidden;
+    opacity: 0;
+    box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
+    @include flexbox ($spacing: space-between, $align: flex-end);
+    animation: charging-menu 1s ease-in-out forwards ;
+    @for $i from 1 through 14 {
+        &--#{$i} {
+            animation-delay: 150ms * $i;
+        }   
+    } 
+    .menu__detail {
+        width: calc(100% - 60px);
+        transition: all 0.6s ease-out;
+        padding-top:0.7rem;
+        padding-left: 1rem;
+        padding-bottom: 0.7rem;
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            // padding-top: 0.7rem;
+            // padding-left: 0.7rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }    
+        p {
+            font-weight: 300;
+            font-size: 0.9rem; 
+            // padding-bottom: 0.7rem;
+            // padding-left: 0.7rem;
+    //ici max-width et white-space etc devraient apparaître seulement dans version mobile//
+            max-width: 260px;
+            // width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }        
+    .menu__price {
+        width: 60px;
+        @include flexbox($spacing: center, $align: flex-end);
+        transition: width 0.8s ease-in; 
+        strong {
+            display: inline-block;
+            margin:  0.7rem 1rem;   
+        }
+        .menu__chosen {
+            background-color: $colorTertiary;
+            width: 70px;
+    // ici il faut trouver comment exprimer la height autrement//
+            height: 4.4rem;
+            border-top-right-radius: 14px;
+            border-bottom-right-radius: 14px;
+            @include flexbox($spacing: center, $align:center);
+            opacity: 0; 
+            transition: all 0.8s ease-in; 
+            &--icon {
+                color: white;
+                font-size: 1.3rem;
+                transition: transform 0.5s ease-in;
+            }
+        }
+    }
+
+    &:hover {
+        .menu__detail {
+            width: calc(100% - 130px);
+        }
+        .menu__price{
+            width: 130px;
+        }
+        .menu__chosen{
+            opacity: 1;
+            &--icon {
+                transform: rotate(360deg);
+            }
+        }
+         
+    } 
+}
+
+
+
+     
+
+
+

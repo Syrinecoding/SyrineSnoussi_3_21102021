@@ -23,28 +23,23 @@
         display: inline-block;       
         // transition: 2s ease-out;        
     } 
-//     &--empty:hover {
-//         -webkit-text-fill-color: transparent;
-//         background-clip: text;
-//         -webkit-background-clip: text;
-//         background-image: $colorHeart;                    
-//    }   
-}
-
-.card__heart--full{   
-    position: relative;  
-    font-size: 1.5rem;
-    display: inline-block;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: $colorHeart;   
-    opacity: 0; 
-    cursor: default; 
-    // z-index: 1;
-    &:hover{        
-        animation: fillIn 1500ms ease-out forwards;
+    &--full{   
+        position: relative;  
+        font-size: 1.5rem;
+        display: inline-block;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: $colorHeart;   
+        opacity: 0; 
+        cursor: default; 
+        // z-index: 1;
+        &:hover{        
+            animation: fillIn 1500ms ease-out forwards;
+            
+        }
         
     }
-    
 }
+
+
