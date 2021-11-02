@@ -4,7 +4,7 @@
 @import "./heart";
 @import "./check";
 @import "./menu";
-@import "./menuAnim";
+@import "./loading";
 
 // html {
 //     scroll-behavior: smooth;
@@ -12,11 +12,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-.load {
-    width: 100%;
-    height: 100vh;
-    display: none;
-}
+
 a {
     text-decoration: none;
     color: black;

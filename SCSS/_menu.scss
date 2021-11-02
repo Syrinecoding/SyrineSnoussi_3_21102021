@@ -1,7 +1,7 @@
 @keyframes charging-menu {
     from {
         opacity: 0;
-        transform: translateY(1200px);
+        transform: translateY(100px);
     }
     to{
         opacity: 1;
@@ -76,10 +76,10 @@
     overflow: hidden;
     box-shadow: 0 5px 10px map-get($map: $grey, $key: medium);
     @include flexbox ($spacing: space-between, $align: flex-end);
-    animation: charging-menu 3s ease-out ;
+    animation: charging-menu 1s ease-in-out ;
     @for $i from 1 through 10 {
         &--#{$i} {
-            animation-delay: 200ms * $i;
+            animation-delay: 150ms * $i;
         }
         
     }
