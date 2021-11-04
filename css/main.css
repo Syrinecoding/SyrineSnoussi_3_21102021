@@ -199,22 +199,20 @@
   width: calc(100% - 60px);
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
-  padding-top: 0.7rem;
-  padding-left: 1rem;
-  padding-bottom: 0.7rem;
 }
 
 .menu__item .menu__detail h4 {
   font-size: 1.1rem;
   font-weight: 500;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  padding-top: 0.7rem;
+  padding-left: 1rem;
 }
 
 .menu__item .menu__detail p {
   font-weight: 300;
   font-size: 0.9rem;
+  padding-bottom: 0.7rem;
+  padding-left: 1rem;
   max-width: 260px;
   white-space: nowrap;
   overflow: hidden;
@@ -223,6 +221,7 @@
 
 .menu__item .menu__price {
   width: 60px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,9 +232,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: width 0.8s ease-in;
   transition: width 0.8s ease-in;
 }
@@ -248,7 +247,7 @@
 .menu__item .menu__price .menu__chosen {
   background-color: #99E2D0;
   width: 70px;
-  height: 4.4rem;
+  height: 100%;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   display: -webkit-box;
@@ -265,8 +264,8 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: all 0.8s ease-in;
-  transition: all 0.8s ease-in;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .menu__item .menu__price .menu__chosen--icon {
@@ -280,6 +279,12 @@
 
 .menu__item:hover .menu__detail {
   width: calc(100% - 130px);
+}
+
+.menu__item:hover .menu__detail h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__item:hover .menu__price {

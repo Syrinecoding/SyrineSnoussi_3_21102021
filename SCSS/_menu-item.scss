@@ -28,34 +28,34 @@
     .menu__detail {
         width: calc(100% - 60px);
         transition: all 0.6s ease-out;
-        padding-top:0.7rem;
-        padding-left: 1rem;
-        padding-bottom: 0.7rem;
         h4 {
             font-size: 1.1rem;
             font-weight: 500;
-            // padding-top: 0.7rem;
-            // padding-left: 0.7rem;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            padding-top:0.7rem;
+            padding-left: 1rem;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+            // overflow: hidden;
         }    
         p {
             font-weight: 300;
             font-size: 0.9rem; 
-            // padding-bottom: 0.7rem;
-            // padding-left: 0.7rem;
+            padding-bottom: 0.7rem;
+            padding-left: 1rem;
     //ici max-width et white-space etc devraient apparaître seulement dans version mobile//
             max-width: 260px;
             // width: 100%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            
         }
     }        
     .menu__price {
         width: 60px;
-        @include flexbox($spacing: center, $align: flex-end);
+        height: 100%;
+        // display: flex;
+        @include flexbox($spacing: center, $align: center);
         transition: width 0.8s ease-in; 
         strong {
             display: inline-block;
@@ -65,12 +65,12 @@
             background-color: $colorTertiary;
             width: 70px;
     // ici il faut trouver comment exprimer la height autrement//
-            height: 4.4rem;
+            height: 100%;
             border-top-right-radius: 14px;
             border-bottom-right-radius: 14px;
             @include flexbox($spacing: center, $align:center);
             opacity: 0; 
-            transition: all 0.8s ease-in; 
+            transition: all 0.8s ease-in-out; 
             &--icon {
                 color: white;
                 font-size: 1.3rem;
@@ -82,12 +82,19 @@
     &:hover {
         .menu__detail {
             width: calc(100% - 130px);
+            h4 {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
         }
         .menu__price{
             width: 130px;
         }
         .menu__chosen{
             opacity: 1;
+            // height:;
             &--icon {
                 transform: rotate(360deg);
             }
