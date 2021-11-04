@@ -639,13 +639,15 @@ footer ul {
   font-size: 0.9rem;
   padding-bottom: 0.7rem;
   padding-left: 1rem;
-  max-width: 260px;
+  width: calc(100% - 1rem);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .menu__item .menu__price {
+  position: absolute;
+  right: 0;
   width: 60px;
   height: 4.4rem;
   display: -webkit-box;
@@ -667,7 +669,7 @@ footer ul {
 
 .menu__item .menu__price strong {
   display: inline-block;
-  margin: 0.7rem 1rem;
+  margin: auto 1rem 0.7rem 1rem;
 }
 
 .menu__item .menu__price .menu__chosen {

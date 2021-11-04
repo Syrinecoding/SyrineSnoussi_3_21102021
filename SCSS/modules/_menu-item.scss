@@ -34,18 +34,13 @@
             font-weight: 500;
             padding-top:0.7rem;
             padding-left: 1rem;
-            // white-space: nowrap;
-            // text-overflow: ellipsis;
-            // overflow: hidden;
         }    
         p {
             font-weight: 300;
             font-size: 0.9rem; 
             padding-bottom: 0.7rem;
             padding-left: 1rem;
-    //ici max-width et white-space etc devraient apparaître seulement dans version mobile//
-            max-width: 260px;
-            // width: 100%;
+            width: calc(100% - 1rem);     
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -53,20 +48,20 @@
         }
     }        
     .menu__price {
+        position: absolute;
+        right: 0;
         width: 60px;
-        // height: 100%;
         height: 4.4rem;
         // display: flex;
         @include flexbox($spacing: center, $align: flex-end);
         transition: width 0.8s ease-in; 
         strong {
             display: inline-block;
-            margin:  0.7rem 1rem;   
+            margin:  auto 1rem 0.7rem 1rem;   
         }
         .menu__chosen {
             background-color: $colorTertiary;
             width: 70px;
-    // ici il faut trouver comment exprimer la height autrement//
             height: 100%;
             border-top-right-radius: 14px;
             border-bottom-right-radius: 14px;
@@ -88,8 +83,7 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-            }
-            
+            } 
         }
         .menu__price{
             width: 130px;
