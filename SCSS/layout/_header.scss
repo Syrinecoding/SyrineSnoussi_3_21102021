@@ -1,0 +1,10 @@
+header {
+    width: 100%;
+    padding: 1rem;
+    @include flexbox($spacing: center);
+   
+    h1 {
+        font-family: $font-family;
+        text-align: center;
+    }
+}
