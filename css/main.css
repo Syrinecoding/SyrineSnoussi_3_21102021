@@ -348,6 +348,7 @@ h2 {
 
 .card {
   min-width: 340px;
+  width: 40%;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 10px #EAEAEA;
           box-shadow: 0 5px 10px #EAEAEA;
@@ -737,5 +738,99 @@ footer ul {
 .menu__item:hover .menu__chosen--icon {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media (min-width: 768px) {
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+  }
+  .location {
+    width: 300px;
+    border-radius: 25px;
+    margin: 1rem auto;
+  }
+  .exploreBox {
+    border-radius: 17px;
+    margin-top: 4rem;
+    -webkit-box-shadow: 0 5px 5px #EAEAEA;
+            box-shadow: 0 5px 5px #EAEAEA;
+    padding: 1rem 0;
+  }
+  .exploreBox h2 {
+    font-size: 1.7rem;
+  }
+  .exploreBox p {
+    margin: 1rem;
+  }
+  .selectionBox {
+    margin: 1rem;
+  }
+  .restaurants h2 {
+    text-align: center;
+    padding: 0 0 2rem 0;
+    font-size: 1.7rem;
+  }
+  footer {
+    padding: 2rem;
+  }
+  footer h4 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .exploreBox {
+    width: 60%;
+  }
+  .exploreBox h2 {
+    font-size: 2rem;
+  }
+  .exploreBox p {
+    font-size: 1.3rem;
+  }
+  .restaurants h2 {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  .card {
+    margin: 1.5rem;
+  }
+  .card__img {
+    min-height: 280px;
+  }
+  .card__ref h3 {
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+  }
+  .card__ref p {
+    font-size: 1.1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

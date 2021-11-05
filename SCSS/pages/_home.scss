@@ -14,6 +14,7 @@
 h2{
     font-size: 1.5rem;
 }
+
 .exploreBox {
     background-color: lighten($colorGrey, 20);
     text-align: center;
@@ -111,7 +112,7 @@ h2{
 
 .card {
     min-width: 340px;
-    // width: 90%;
+    width: 40%;
     // height: 25%;
     border-radius: 15px;
     box-shadow: 0 5px 10px #EAEAEA;
@@ -126,6 +127,7 @@ h2{
         width: 100%;
         // height: (clamp(175px, 70%, 400px));
         height: 175px;
+        
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         &--center {
@@ -155,3 +157,75 @@ h2{
         
     }
 }
+
+@mixin home--md{
+    .home {
+        @include flexbox($direction: row-reverse);
+        margin: 1rem;
+        
+    } 
+    .location {
+        width: 300px;
+        border-radius: 25px;
+        margin: 1rem auto;
+    } 
+    .exploreBox {
+        border-radius: 17px;
+        margin-top: 4rem;
+        box-shadow: 0 5px 5px #EAEAEA;
+        padding: 1rem 0;
+        h2 {
+            font-size: 1.7rem;
+        }
+        p {
+            margin: 1rem;
+        }
+    } 
+    .selectionBox {
+        margin: 1rem;
+    }
+}
+@mixin home--lg{
+    .exploreBox {
+        width: 60%;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}
+ @mixin restaurants--md {
+    .restaurants h2 {
+        text-align: center;
+        padding: 0 0 2rem 0;
+        font-size: 1.7rem;
+    }
+ }
+
+ @mixin restaurants--lg {
+    .restaurants h2 {
+         font-size: 2rem;
+         padding: 2rem;
+    }
+ }
+
+ @mixin card--lg {
+    .card {
+        margin: 1.5rem;
+    
+     }
+    .card__img {
+        min-height: 280px;
+    }
+    .card__ref {
+        h3 {
+            font-size: 1.3rem;
+            padding-bottom: 5px;
+         }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+ }

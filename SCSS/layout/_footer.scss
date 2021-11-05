@@ -16,3 +16,16 @@ footer {
    
     }
 }
+
+@mixin footer--md {
+    footer {
+        padding: 2rem;
+        h4 {
+        font-size: 1.3rem;
+        text-align: center;
+        }
+    }
+    ul {
+        @include flexbox();
+    }
+}
