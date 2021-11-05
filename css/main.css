@@ -321,18 +321,6 @@ h2 {
   background-color: #f9f9f9;
   width: 100vw;
   padding: 1rem 0 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .restaurants h2 {
@@ -341,9 +329,25 @@ h2 {
       align-self: flex-start;
 }
 
+.restaurants__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .card {
   min-width: 340px;
-  width: 80%;
   border-radius: 15px;
   -webkit-box-shadow: 0 5px 10px #EAEAEA;
           box-shadow: 0 5px 10px #EAEAEA;
@@ -362,6 +366,13 @@ h2 {
   height: 175px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.card__img--center {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .card__legend {

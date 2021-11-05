@@ -103,12 +103,16 @@ h2{
         padding: 2rem 1rem 1rem 1rem;
         align-self: flex-start;
     }
-    @include flexbox($direction: column);
+    &__flex {
+        @include flexbox($wrap: wrap);
+    }
+    
 }
+
 .card {
     min-width: 340px;
-    width: 80%;
-    // min-height: 250px;
+    // width: 90%;
+    // height: 25%;
     border-radius: 15px;
     box-shadow: 0 5px 10px #EAEAEA;
     margin: 0 1rem 1rem;
@@ -120,9 +124,14 @@ h2{
         object-fit: cover;
         object-position: bottom;
         width: 100%;
+        // height: (clamp(175px, 70%, 400px));
         height: 175px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        &--center {
+            object-fit: cover;
+            object-position: center;
+        }
     }    
     &__legend{
         // min-height: 30%;
