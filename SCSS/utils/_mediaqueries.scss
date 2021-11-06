@@ -1,7 +1,8 @@
 @media (min-width: 768px){
     @include home--md;
     @include restaurants--md;
-    @include footer--md
+    @include footer--md;
+    @include menu--md;
 }
 
 @media (min-width: 992px){

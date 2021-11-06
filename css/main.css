@@ -468,7 +468,7 @@ footer ul {
 
 .menu__heading h2 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
 }
 
 .menu__bloc {
@@ -795,6 +795,34 @@ footer ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .menu__img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+  }
+  .menu__heading {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+  .menu__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu__bloc {
+    width: 30%;
   }
 }
 
