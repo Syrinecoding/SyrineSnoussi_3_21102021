@@ -11,9 +11,6 @@
         text-align: center;      
     } 
 }
-h2{
-    font-size: 1.5rem;
-}
 
 .exploreBox {
     background-color: lighten($colorGrey, 20);
@@ -25,6 +22,7 @@ h2{
     p {
         color: darken($colorGrey, 25);
         font-size: 1.2rem;
+        // font-size: (clamp(1.2rem, 90%, 1.3rem));
     }
     &__btn{
         padding: 1rem;
@@ -174,9 +172,9 @@ h2{
         margin-top: 4rem;
         box-shadow: 0 5px 5px #EAEAEA;
         padding: 1rem 0;
-        h2 {
-            font-size: 1.7rem;
-        }
+        // h2 {
+        //     font-size: 1.7rem;
+        // }
         p {
             margin: 1rem;
         }
@@ -185,33 +183,35 @@ h2{
         margin: 1rem;
     }
 }
+
 @mixin home--lg{
     .exploreBox {
         width: 60%;
-        h2 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.3rem;
-        }
+        // h2 {
+        //     font-size: 2rem;
+        // }
+        // p {
+        //     font-size: 1.3rem;
+        // }
     }
 }
- @mixin restaurants--md {
+
+@mixin restaurants--md {
     .restaurants h2 {
         text-align: center;
         padding: 0 0 2rem 0;
-        font-size: 1.7rem;
+        // font-size: 1.7rem;
     }
- }
+}
 
- @mixin restaurants--lg {
+@mixin restaurants--lg {
     .restaurants h2 {
-         font-size: 2rem;
+        //  font-size: 2rem;
          padding: 2rem;
     }
- }
+}
 
- @mixin card--lg {
+@mixin card--lg {
     .card {
         margin: 1.5rem;
     
@@ -221,11 +221,11 @@ h2{
     }
     .card__ref {
         h3 {
-            font-size: 1.3rem;
+            // font-size: 1.3rem;
             padding-bottom: 5px;
          }
         p {
             font-size: 1.1rem;
         }
     }
- }
+}

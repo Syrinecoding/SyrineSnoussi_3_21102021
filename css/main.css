@@ -120,6 +120,7 @@ header {
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
+  font-size: clamp(2em, 5vw, 3.5em);
 }
 
 @-webkit-keyframes fillIn {
@@ -203,10 +204,6 @@ header h1 {
   border: none;
   background-color: #ececec;
   text-align: center;
-}
-
-h2 {
-  font-size: 1.5rem;
 }
 
 .exploreBox {
@@ -768,9 +765,6 @@ footer ul {
             box-shadow: 0 5px 5px #EAEAEA;
     padding: 1rem 0;
   }
-  .exploreBox h2 {
-    font-size: 1.7rem;
-  }
   .exploreBox p {
     margin: 1rem;
   }
@@ -780,7 +774,6 @@ footer ul {
   .restaurants h2 {
     text-align: center;
     padding: 0 0 2rem 0;
-    font-size: 1.7rem;
   }
   footer {
     padding: 2rem;
@@ -809,14 +802,7 @@ footer ul {
   .exploreBox {
     width: 60%;
   }
-  .exploreBox h2 {
-    font-size: 2rem;
-  }
-  .exploreBox p {
-    font-size: 1.3rem;
-  }
   .restaurants h2 {
-    font-size: 2rem;
     padding: 2rem;
   }
   .card {
@@ -826,7 +812,6 @@ footer ul {
     min-height: 280px;
   }
   .card__ref h3 {
-    font-size: 1.3rem;
     padding-bottom: 5px;
   }
   .card__ref p {
