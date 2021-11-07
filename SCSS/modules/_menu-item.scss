@@ -9,7 +9,7 @@
     }
 }
 
-.menu__item {     
+.item {     
     width: 100%;
     line-height: 1.5rem;
     border-radius: 14px;
@@ -25,7 +25,7 @@
             animation-delay: 150ms * $i;
         }   
     } 
-    .menu__detail {
+    &__detail {
         width: calc(100% - 60px);
         // min-height: 4.4rem;
         transition: all 0.6s ease-out;
@@ -47,7 +47,7 @@
             
         }
     }        
-    .menu__price {
+    &__price {
         position: absolute;
         right: 0;
         width: 60px;
@@ -59,7 +59,7 @@
             display: inline-block;
             margin:  auto 1rem 0.7rem 1rem;   
         }
-        .menu__chosen {
+        &__chosen {
             background-color: $colorTertiary;
             width: 70px;
             height: 100%;
@@ -77,7 +77,7 @@
     }
 
     &:hover {
-        .menu__detail {
+        .item__detail {
             width: calc(100% - 130px);
             h4 {
                 white-space: nowrap;
@@ -85,16 +85,17 @@
                 text-overflow: ellipsis;
             } 
         }
-        .menu__price{
+        .item__price{
             width: 130px;
-        }
-        .menu__chosen{
-            opacity: 1;
-            // height:;
-            &--icon {
-                transform: rotate(360deg);
+            &__chosen{
+                opacity: 1;
+                // height:;
+                &--icon {
+                    transform: rotate(360deg);
+                }
             }
         }
+        
          
     } 
 }
