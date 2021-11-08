@@ -1,39 +1,88 @@
-@keyframes spin {
-    0%{
-        transform: rotate(0deg);
-        opacity: 1;
+// @keyframes spin {
+//     0%{
+//         transform: rotate(0deg);
+//         opacity: 1;
        
 
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
+//     }
+//     100%{
+//         transform: rotate(360deg);
+//     }
+// }
 @keyframes load {
-    from {
+    0% {
         opacity: 1;
     }
-    to {
+    90%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 0.8;
+    }
+    100% {
         opacity: 0;
         visibility: hidden;
     }
 }
 
+// .load {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     z-index: 10;
+//     background-color: #f3f3f3;
+//     @include flexbox;
+//     animation: load 3s ease-in forwards;
+//     &__item{
+//         width: 150px;
+//         height: 150px;
+//         border: 4px solid $colorTertiary;
+//         border-top-color: $colorPrimary;
+//         border-bottom-color: $colorSecondary;
+//         border-radius: 50%;
+//         animation: spin .6s linear infinite forwards;
+//     }
+// }
+$duration: 1100ms;
+@keyframes updown {
+    0%{
+        transform: translateY(75%);
+    }
+    50%{
+        transform: translateY(-75%);
+    }
+    100%{
+        transform: translateY(75%);
+    }
+}
 .load {
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 10;
+    z-index: 4;
     background-color: #f3f3f3;
-    @include flexbox;
+    @include flexbox($spacing: center);
+    gap: 30px;
     animation: load 3s ease-in forwards;
     &__item{
-        width: 150px;
-        height: 150px;
-        border: 4px solid $colorTertiary;
-        border-top-color: $colorPrimary;
-        border-bottom-color: $colorSecondary;
+        width: 75px;
+        height: 75px;
         border-radius: 50%;
-        animation: spin .6s linear infinite forwards;
+        animation: updown $duration ease-in-out infinite;
+        
+        &:nth-child(1){
+            background-color: $colorPrimary;
+            animation-delay: 200ms;
+        }
+        &:nth-child(2){
+            background-color:$colorSecondary;
+            animation-delay: 400ms;
+        }
+        &:nth-child(3){
+            background-color: $colorTertiary;
+            animation-delay: 600ms;
+        }
+
+
     }
 }
