@@ -217,10 +217,17 @@ header h1 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   opacity: 0;
-  cursor: default;
 }
 
-.card__heart--full:hover {
+.card__heart:hover > .card__heart--empty {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+
+.card__heart:hover > .card__heart--full {
   -webkit-animation: fillIn 1500ms ease-out forwards;
           animation: fillIn 1500ms ease-out forwards;
 }
@@ -298,8 +305,8 @@ header h1 {
 }
 
 .selectionBox__btn {
-  width: 320px;
-  height: 71px;
+  width: Min(320px, 100%);
+  min-height: 71px;
   padding: 1rem;
   border-radius: 17px;
   background-color: #f9f9f9;
@@ -330,6 +337,10 @@ header h1 {
   background-color: #e9ddf8;
 }
 
+.selectionBox__btn:hover > .selectionBox__icon {
+  color: #9356DC;
+}
+
 .selectionBox__btn span {
   border: 1px solid #9356DC;
   background-color: #9356DC;
@@ -351,7 +362,6 @@ header h1 {
 
 .restaurants {
   background-color: #f9f9f9;
-  width: 100vw;
   padding: 1rem 0 2rem 0;
 }
 
@@ -667,6 +677,7 @@ footer ul {
 
 .item__detail {
   width: calc(100% - 60px);
+  height: 100%;
   -webkit-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
@@ -693,7 +704,7 @@ footer ul {
   position: absolute;
   right: 0;
   width: 60px;
-  height: 4.4rem;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,17 +747,17 @@ footer ul {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+  -webkit-transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .item__price__chosen--icon {
   color: white;
   font-size: 1.3rem;
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transition: -webkit-transform 0.7s ease-in;
+  transition: -webkit-transform 0.7s ease-in;
+  transition: transform 0.7s ease-in;
+  transition: transform 0.7s ease-in, -webkit-transform 0.7s ease-in;
 }
 
 .item:hover .item__detail {
@@ -770,6 +781,15 @@ footer ul {
 .item:hover .item__price__chosen--icon {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+@media (max-width: 374px) {
+  .selectionBox__icon {
+    visibility: hidden;
+  }
+  .card {
+    min-width: 90%;
+  }
 }
 
 @media (min-width: 768px) {

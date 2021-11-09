@@ -31,14 +31,16 @@
         background-clip: text;
         -webkit-background-clip: text;
         background-image: $colorHeart;   
-        opacity: 0; 
-        cursor: default; 
-        // z-index: 1;
-        &:hover{        
-            animation: fillIn 1500ms ease-out forwards;
-            
-        }
-        
+        opacity: 0;      
+    }
+    &:hover>.card__heart--empty{
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-image: $colorHeart;
+    }
+    &:hover>.card__heart--full{
+        animation: fillIn 1500ms ease-out forwards; 
     }
 }
 

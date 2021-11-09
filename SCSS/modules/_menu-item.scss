@@ -27,7 +27,7 @@
     } 
     &__detail {
         width: calc(100% - 60px);
-        // min-height: 4.4rem;
+        height: 100%;
         transition: all 0.6s ease-out;
         h4 {
             font-size: 1.1rem;
@@ -51,8 +51,7 @@
         position: absolute;
         right: 0;
         width: 60px;
-        height: 4.4rem;
-        // display: flex;
+        height: 100%;
         @include flexbox($spacing: center, $align: flex-end);
         transition: width 0.8s ease-in; 
         strong {
@@ -67,11 +66,12 @@
             border-bottom-right-radius: 14px;
             @include flexbox($spacing: center, $align:center);
             opacity: 0; 
-            transition: all 0.8s ease-in-out; 
+            transition: opacity 0.8s ease-in-out; 
             &--icon {
                 color: white;
+                // padding: 1.5rem 0;
                 font-size: 1.3rem;
-                transition: transform 0.5s ease-in;
+                transition: transform 0.7s ease-in;
             }
         }
     }
@@ -89,7 +89,6 @@
             width: 130px;
             &__chosen{
                 opacity: 1;
-                // height:;
                 &--icon {
                     transform: rotate(360deg);
                 }
