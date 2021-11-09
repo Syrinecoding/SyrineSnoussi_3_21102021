@@ -769,6 +769,7 @@ footer ul .fa-utensils {
 }
 
 .item:hover .item__detail h4 {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
