@@ -58,7 +58,7 @@
         background-color: lighten($colorGrey, 20);
         border:none;
         // @include shadow($colorGrey: lighten($colorGrey, 15));
-        box-shadow: 0 5px 5px #EAEAEA;
+        box-shadow: 0 5px 5px map-get($map: $grey, $key:medium);
         font-size: 1rem;
         margin: 0.8rem 0.5rem;
         position: relative;
@@ -115,7 +115,7 @@
     width: 40%;
     // height: 25%;
     border-radius: 15px;
-    box-shadow: 0 5px 10px #EAEAEA;
+    box-shadow: 0 5px 10px map-get($map: $grey, $key:medium);
     margin: 0 1rem 1rem;
     background-color: #FFF;
     position: relative;
@@ -185,7 +185,7 @@
     .exploreBox {
         border-radius: 17px;
         margin-top: 4rem;
-        box-shadow: 0 5px 5px #EAEAEA;
+        box-shadow: 0 5px 5px map-get($map: $grey, $key:medium);
         padding: 1rem 0;
         // h2 {
         //     font-size: 1.7rem;
