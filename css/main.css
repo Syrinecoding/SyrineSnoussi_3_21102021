@@ -198,6 +198,7 @@ header h1 {
 
 .card__heart {
   position: relative;
+  cursor: default;
 }
 
 .card__heart--empty {
