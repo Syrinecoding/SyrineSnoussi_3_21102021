@@ -5,6 +5,12 @@
     position: absolute;
     top: 1.8rem;
     left: 2rem;
+}
+@mixin back--sm {
+    .fa-arrow-left{
+        top: 0.4rem; 
+        left: 0.5rem;
+    }
     
 }
 .menu__img{

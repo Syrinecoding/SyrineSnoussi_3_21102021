@@ -1,5 +1,7 @@
 @media (max-width: 374px) {
+    @include load--sm;
     @include home--sm;
+    @include back--sm;
 }
 @media (min-width: 768px){
     @include home--md;

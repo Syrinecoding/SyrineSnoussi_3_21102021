@@ -51,6 +51,7 @@
     }
     &__btn {
         width: Min(320px, 100%);
+        // width: 320px;
         min-height: 71px;
         padding: 1rem;
         border-radius: 17px;
@@ -138,8 +139,9 @@
         // min-height: 30%;
         padding: 1rem;
         @include flexbox($spacing: space-between);
+        
         p {
-            color: darken($colorGrey, 40);
+            color: darken($colorGrey, 40); 
             font-weight: 300;
         }
     }    
@@ -158,20 +160,22 @@
 }
 @mixin home--sm {
     .selectionBox__icon{
-        visibility: hidden;
+        opacity: 0;
     }
     .card{
         min-width: 90%;
-     
-        
-
+        &__img {
+            height: 150px;
+        }
+        &__legend{
+            padding: 0.6rem;
+        }
     }
 }
 @mixin home--md{
     .home {
         @include flexbox($direction: row-reverse);
         margin: 1rem;
-        
     } 
     .location {
         width: 300px;
@@ -192,6 +196,9 @@
     } 
     .selectionBox {
         margin: 1rem;
+        &__btn{
+            width: 320px;
+        }
     }
 }
 

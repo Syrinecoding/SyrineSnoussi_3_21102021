@@ -155,7 +155,7 @@ header {
 header h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-size: clamp(2em, 5vw, 3.5em);
+  font-size: clamp(2em, 4vw, 3.5em);
 }
 
 @-webkit-keyframes fillIn {
@@ -472,6 +472,10 @@ footer ul {
   list-style: none;
 }
 
+footer ul .fa-utensils {
+  padding-right: 7px;
+}
+
 .fa-arrow-left {
   font-size: 1.5rem;
   position: absolute;
@@ -765,7 +769,6 @@ footer ul {
 }
 
 .item:hover .item__detail h4 {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -784,11 +787,25 @@ footer ul {
 }
 
 @media (max-width: 374px) {
+  .load__item {
+    width: 50px;
+    height: 50px;
+  }
   .selectionBox__icon {
-    visibility: hidden;
+    opacity: 0;
   }
   .card {
     min-width: 90%;
+  }
+  .card__img {
+    height: 150px;
+  }
+  .card__legend {
+    padding: 0.6rem;
+  }
+  .fa-arrow-left {
+    top: 0.4rem;
+    left: 0.5rem;
   }
 }
 
@@ -825,6 +842,9 @@ footer ul {
   }
   .selectionBox {
     margin: 1rem;
+  }
+  .selectionBox__btn {
+    width: 320px;
   }
   .restaurants h2 {
     text-align: center;

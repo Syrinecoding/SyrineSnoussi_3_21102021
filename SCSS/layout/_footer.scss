@@ -13,6 +13,12 @@ footer {
     }
     ul {
         list-style: none;
+        .fa-utensils {
+            padding-right: 7px;
+        }
+        // .fa-hands-helping {
+        //     padding-right: px;
+        // }
    
     }
 }
@@ -27,5 +33,6 @@ footer {
     }
     ul {
         @include flexbox();
+        
     }
 }

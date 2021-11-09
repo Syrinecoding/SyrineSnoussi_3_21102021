@@ -86,3 +86,9 @@ $duration: 1100ms;
 
     }
 }
+@mixin load--sm {
+    .load__item {
+        width: 50px;
+        height: 50px;
+    }
+}
