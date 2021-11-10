@@ -47,6 +47,7 @@ $duration: 1100ms;
 @keyframes updown {
     0%{
         transform: translateY(75%);
+        opacity: 1;
     }
     50%{
         transform: translateY(-75%);
@@ -68,6 +69,7 @@ $duration: 1100ms;
         width: 75px;
         height: 75px;
         border-radius: 50%;
+        opacity: 0;
         animation: updown $duration ease-in-out infinite;
         
         &:nth-child(1){
