@@ -1,16 +1,16 @@
-@media (max-width: 374px) {
+@media (max-width: $small) {
     @include load--sm;
     @include home--sm;
     @include back--sm;
 }
-@media (min-width: 768px){
+@media (min-width: $medium){
     @include home--md;
     @include restaurants--md;
     @include footer--md;
     @include menu--md;
 }
 
-@media (min-width: 992px){
+@media (min-width: $large){
     @include home--lg;
     @include restaurants--lg;
     @include card--lg;

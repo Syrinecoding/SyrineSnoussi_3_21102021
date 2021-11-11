@@ -19,6 +19,15 @@ main {
 }
 img {
     display: block;
-    // max-width: 400px;
-    
+    // max-width: 400px;   
 }
+
+.wrapper {
+    max-width: 2000px;
+    margin: 0 auto;
+  
+}
+
+// .sticky-footer {
+//     @include flexbox($direction: row, $spacing: space-between);
+// }

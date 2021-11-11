@@ -13,15 +13,18 @@
     0% {
         opacity: 1;
     }
-    90%{
+    89%{
         opacity: 1;
     }
-    95%{
+    94%{
         opacity: 0.8;
     }
-    100% {
+    99%{
         opacity: 0;
-        visibility: hidden;
+        transform:scale(1)
+    }
+    100% {
+        transform:scale(0);
     }
 }
 
@@ -43,11 +46,11 @@
 //         animation: spin .6s linear infinite forwards;
 //     }
 // }
-$duration: 1100ms;
+$duration: 1150ms;
 @keyframes updown {
     0%{
         transform: translateY(75%);
-        opacity: 1;
+        // opacity: 1;
     }
     50%{
         transform: translateY(-75%);
@@ -56,33 +59,52 @@ $duration: 1100ms;
         transform: translateY(75%);
     }
 }
+
+@keyframes delais {
+    0% {
+        opacity:0;
+    };
+    100%{
+        opacity: 1;
+    };
+}
 .load {
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 4;
     background-color: #f3f3f3;
-    @include flexbox($spacing: center);
-    gap: 30px;
-    animation: load 3s ease-in forwards;
+    
+    
+    &__delay{
+        width: 100%;
+        height: 100%;
+        @include flexbox($spacing: center);
+        gap: 30px;
+        opacity: 0;
+        animation: delais 600ms forwards;
+    }
+    animation: load 2s ease-in forwards;
     &__item{
         width: 75px;
         height: 75px;
         border-radius: 50%;
-        opacity: 0;
+        // transform: translateY(75%);
+        // opacity: 0;
         animation: updown $duration ease-in-out infinite;
         
         &:nth-child(1){
             background-color: $colorPrimary;
-            animation-delay: 200ms;
+            // animation-delay: 200ms;
+            // transform:translateY(75%);
         }
         &:nth-child(2){
             background-color:$colorSecondary;
-            animation-delay: 400ms;
+            animation-delay: -200ms;
         }
         &:nth-child(3){
             background-color: $colorTertiary;
-            animation-delay: 600ms;
+            animation-delay: -400ms;
         }
 
 
