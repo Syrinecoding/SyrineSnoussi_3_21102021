@@ -120,9 +120,6 @@
         margin-top: 4rem;
         box-shadow: 0 5px 5px map-get($map: $grey, $key:medium);
         padding: 1rem 0;
-        // h2 {
-        //     font-size: 1.7rem;
-        // }
         p {
             margin: 1rem;
         }
@@ -138,12 +135,6 @@
 @mixin home--lg{
     .exploreBox {
         width: 60%;
-        // h2 {
-        //     font-size: 2rem;
-        // }
-        // p {
-        //     font-size: 1.3rem;
-        // }
     }
 }
 
@@ -157,7 +148,6 @@
 
 @mixin restaurants--lg {
     .restaurants h2 {
-        //  font-size: 2rem;
          padding: 2rem;
     }
 }
