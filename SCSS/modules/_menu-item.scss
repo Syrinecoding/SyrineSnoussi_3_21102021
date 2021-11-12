@@ -8,7 +8,14 @@
         transform: translateY(0px);
     }
 }
-
+@keyframes opacite {
+    0% {
+        opacity : 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .item {     
     width: 100%;
     line-height: 1.5rem;
@@ -28,7 +35,7 @@
     &__detail {
         width: calc(100% - 60px);
         height: 100%;
-        transition: all 0.6s ease-out;
+        // transition: width 0.2s ease-out;
         // transition composée : width: 44, height: sdhj
         h4 {
             font-size: 1.1rem;
@@ -44,8 +51,7 @@
             width: calc(100% - 1rem);     
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
-            
+            text-overflow: ellipsis;   
         }
     }        
     &__price {
@@ -67,7 +73,8 @@
             border-bottom-right-radius: 14px;
             @include flexbox($spacing: center, $align:center);
             opacity: 0; 
-            transition: opacity 0.8s ease-in-out; 
+            transition: opacity 0.8s ease-out; 
+            // animation: opacite 0.8s ease-in-out;
             &--icon {
                 color: white;
                 font-size: 1.3rem;

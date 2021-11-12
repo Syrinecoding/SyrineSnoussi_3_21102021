@@ -1,5 +1,7 @@
 
-
+header {
+    position: relative;
+}
 .fa-arrow-left {
     font-size: 1.5rem;
     position: absolute;
@@ -10,8 +12,14 @@
     .fa-arrow-left{
         top: 0.4rem; 
         left: 0.5rem;
+    }   
+}
+@mixin back--lg {
+    .fa-arrow-left{
+        font-size: 2.5rem;
+        // top: 2rem;
+        transition: font-size 1s ease-in-out;
     }
-    
 }
 .menu__img{
     width: 100%;
@@ -68,9 +76,15 @@
         gap: 30px;  
     }
     .menu__flex {
-        @include flexbox($spacing: space-around, $align: flex-start); 
+        @include flexbox($spacing: space-around, $align: flex-start, $wrap: wrap); 
     }
     .menu__bloc {
-        width: 30%;
+        min-width: 45%;
+        
+    }
+}
+@mixin menu--lg {
+    .menu__bloc {
+        min-width: 30%;
     }
 }

@@ -1,0 +1,71 @@
+.card {
+    min-width: 340px;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px map-get($map: $grey, $key:medium);
+    margin: 0 1rem 1rem;
+    background-color: #FFF;
+    position: relative;
+    z-index: 1;
+    &__img {
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+        height: (clamp(175px, 70%, 400px));
+        height: 175px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        &--center {
+            object-fit: cover;
+            object-position: center;
+        }
+    }    
+    &__legend{
+        padding: 1rem;
+        @include flexbox($spacing: space-between);
+        p {
+            color: darken($colorGrey, 40); 
+            font-weight: 300;
+        }
+    }       
+    &__label-new {
+        background-color: $colorTertiary;
+        padding: 5px 10px;        
+        color: #008766;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 2;   
+    }
+}
+
+@mixin card--sm{
+    .card{
+        min-width: 90%;
+        &__img {
+            height: 150px;
+        }
+        &__legend{
+            padding: 0.6rem;
+        }
+    }
+}
+
+@mixin card--lg {
+    .card {
+        margin: 1.5rem;
+    
+     }
+    .card__img {
+        min-height: 280px;
+    }
+    .card__ref {
+        h3 {
+            padding-bottom: 5px;
+         }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
