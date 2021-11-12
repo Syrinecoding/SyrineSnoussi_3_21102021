@@ -210,10 +210,10 @@ header h1 {
   cursor: pointer;
   -webkit-box-shadow: 0 5px 5px #C6C6C6;
           box-shadow: 0 5px 5px #C6C6C6;
-  -webkit-transition: font-size 0.1s, -webkit-transform 0.3s ease-in-out;
-  transition: font-size 0.1s, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, font-size 0.1s;
-  transition: transform 0.3s ease-in-out, font-size 0.1s, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .exploreBox__btn:hover {
@@ -222,7 +222,6 @@ header h1 {
           box-shadow: 0 8px 8px #b8b7b7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  font-size: 1.1rem;
 }
 
 @-webkit-keyframes fillIn {
@@ -418,7 +417,8 @@ header h1 {
 }
 
 .selectionBox__btn {
-  width: Min(320px, 100%);
+  max-width: 320px;
+  width: 100%;
   min-height: 71px;
   padding: 1rem;
   border-radius: 17px;
@@ -792,8 +792,8 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-transition: width 0.8s ease-in;
-  transition: width 0.8s ease-in;
+  -webkit-transition: width 0.6s ease-in;
+  transition: width 0.6s ease-in;
 }
 
 .item__price strong {

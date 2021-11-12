@@ -60,7 +60,6 @@ header {
             bottom: -2px;
         }
     }
-    
     &__btn {
         @include flexbox($spacing: center);
     }
