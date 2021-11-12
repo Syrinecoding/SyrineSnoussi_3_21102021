@@ -2,6 +2,7 @@
     @include load--sm;
     @include home--sm;
     @include back--sm;
+    @include card--sm;
 }
 @media (min-width: $medium){
     @include home--md;

@@ -97,6 +97,9 @@
 
 
 @mixin home--sm {
+    .selectionBox h2, .restaurants h2{
+        font-size: 1.3rem;
+    }
     .selectionBox__icon{
         opacity: 0;
     }
@@ -127,7 +130,7 @@
     .selectionBox {
         margin: 1rem;
         &__btn{
-            width: 320px;
+            min-width: 320px;
         }
     }
 }

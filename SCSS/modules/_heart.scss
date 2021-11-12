@@ -16,7 +16,7 @@
 
 .card__heart {
     position: relative;
-    cursor: default;
+    cursor: pointer;
     &--empty{  
         position: absolute;      
         font-size: 1.5rem;

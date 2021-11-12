@@ -263,7 +263,7 @@ header h1 {
 
 .card__heart {
   position: relative;
-  cursor: default;
+  cursor: pointer;
 }
 
 .card__heart--empty {
@@ -860,12 +860,30 @@ header {
     width: 50px;
     height: 50px;
   }
+  .selectionBox h2, .restaurants h2 {
+    font-size: 1.3rem;
+  }
   .selectionBox__icon {
     opacity: 0;
   }
   .fa-arrow-left {
     top: 0.4rem;
     left: 0.5rem;
+  }
+  .card {
+    min-width: 90%;
+  }
+  .card__img {
+    height: 150px;
+  }
+  .card__ref h3 {
+    font-size: 1.1rem;
+  }
+  .card__ref p {
+    font-size: 0.9rem;
+  }
+  .card__legend {
+    padding: 0.6rem;
   }
 }
 
@@ -904,7 +922,7 @@ header {
     margin: 1rem;
   }
   .selectionBox__btn {
-    width: 320px;
+    min-width: 320px;
   }
   .restaurants h2 {
     text-align: center;
