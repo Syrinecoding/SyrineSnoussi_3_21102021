@@ -197,6 +197,32 @@ header h1 {
   font-size: clamp(2em, 4vw, 3.5em);
 }
 
+.exploreBox__btn {
+  padding: 1rem;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  margin: 1.5rem;
+  background: radial-gradient(at 20% top, #FF79DA, #9356DC);
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 5px #C6C6C6;
+          box-shadow: 0 5px 5px #C6C6C6;
+  -webkit-transition: font-size 0.1s, -webkit-transform 0.3s ease-in-out;
+  transition: font-size 0.1s, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, font-size 0.1s;
+  transition: transform 0.3s ease-in-out, font-size 0.1s, -webkit-transform 0.3s ease-in-out;
+}
+
+.exploreBox__btn:hover {
+  background: radial-gradient(at 20% top, #ff79da, #a16be0);
+  -webkit-box-shadow: 0 8px 8px #b8b7b7;
+          box-shadow: 0 8px 8px #b8b7b7;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  font-size: 1.1rem;
+}
+
 @-webkit-keyframes fillIn {
   0% {
     -webkit-transform-origin: bottom;
@@ -365,25 +391,6 @@ header h1 {
 .exploreBox p {
   color: #868686;
   font-size: 1.2rem;
-}
-
-.exploreBox__btn {
-  padding: 1rem;
-  border-radius: 24px;
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  margin: 1.5rem;
-  background: radial-gradient(at 20% top, #FF79DA, #9356DC);
-  cursor: pointer;
-  -webkit-box-shadow: 0 5px 5px #C6C6C6;
-          box-shadow: 0 5px 5px #C6C6C6;
-}
-
-.exploreBox__btn:hover {
-  background: radial-gradient(at 20% top, #ff93e1, #a16be0);
-  -webkit-box-shadow: 0 8px 8px #b8b7b7;
-          box-shadow: 0 8px 8px #b8b7b7;
 }
 
 .selectionBox {

@@ -24,22 +24,7 @@
         font-size: 1.2rem;
         // font-size: (clamp(1.2rem, 90%, 1.3rem));
     }
-    &__btn{
-        padding: 1rem;
-        border-radius: 24px;
-        color: #fff;
-        font-size: 1rem;
-        border: none;
-        margin: 1.5rem;
-        background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
-        cursor: pointer;
-        box-shadow: 0 5px 5px $colorGrey;
-        &:hover{
-            background: radial-gradient(at 20% top, lighten($colorSecondary, 5), lighten($colorPrimary, 5));
-            box-shadow: 0 8px 8px #b8b7b7;
-            
-        }
-    }
+    
 }
 .selectionBox {
     margin: 2.5rem 1rem;

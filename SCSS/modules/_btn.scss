@@ -1,0 +1,18 @@
+.exploreBox__btn{
+    padding: 1rem;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    margin: 1.5rem;
+    background: radial-gradient(at 20% top, $colorSecondary, $colorPrimary);
+    cursor: pointer;
+    box-shadow: 0 5px 5px $colorGrey;
+    transition: transform 0.3s ease-in-out, font-size 0.1s;
+    &:hover{
+        background: radial-gradient(at 20% top, lighten($colorSecondary, 0), lighten($colorPrimary, 5));
+        box-shadow: 0 8px 8px map-get($map: $grey, $key: shadow);
+        transform: scale(1.1);
+        font-size: 1.1rem;
+    }
+}
