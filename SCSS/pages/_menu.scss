@@ -50,7 +50,6 @@ header {
         position: relative;
         font-weight: 300;
         font-size: 1rem;
-        // color: map-get($map: $grey, $key: font);
         &::after {
             content:"";
             width: 40px;
